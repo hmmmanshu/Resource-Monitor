@@ -13,7 +13,7 @@ This is a **```Resource Monitor```** TUI app and all the arguments are listed ex
 - Terminal auto resize
 - [Curses](https://docs.python.org/3/library/curses.html#module-curses) implementation
 
-## Prview
+## Preview
 ![](./src/a.png)
 
 ### **Setup**
