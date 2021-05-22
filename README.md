@@ -11,6 +11,9 @@ This is a **```Resource Monitor```** TUI app and all the arguments are listed ex
 ## **Upcoming Features :**
 - Run live update and 
 
+## Prview
+![](./src/a.png)
+
 ### **Setup**
 - Download all the files of this repository
 - Install the necessary libraries as:
