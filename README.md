@@ -9,7 +9,7 @@ This is a **```Resource Monitor```** TUI app and all the arguments are listed ex
 - Kill any process instantly or set a timer to terminate
 
 ## **Upcoming Features :**
-- Run live update and 
+- Run live update and kill app together
 
 ## Prview
 ![](./src/a.png)
