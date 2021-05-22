@@ -11,7 +11,7 @@ This is a **```Resource Monitor```** TUI app and all the arguments are listed ex
 ## **Upcoming Features :**
 - Run live update and kill app together
 - Terminal auto resize
-- Curse implementation
+- [Curses](https://docs.python.org/3/library/curses.html#module-curses) implementation
 
 ## Prview
 ![](./src/a.png)
