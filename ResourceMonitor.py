@@ -7,6 +7,12 @@ import Notify
 import time
 import os
 
+
+def print_header():
+    print("╔"+"═"*118+"╗")
+    print(colored("║\t\t\t\t\t\t[= RESOURCE MONITOR =]\t\t\t\t\t\t       ║", "cyan", attrs=['bold']))
+    print("╚"+"═"*118+"╝")
+
 def construct_dataframe(processes):
     df = pd.DataFrame(processes)
     df.set_index('pid', inplace=True)
@@ -70,7 +76,6 @@ if __name__ == "__main__":
     parser.add_argument("--kill", dest="process_to_close")
     parser.add_argument("--after", dest="duration", default=0)
 
-    print(colored("\n\t\t\t\t\t\t[= RESOURCE MONITOR =]\n", "cyan", attrs=['bold']))
     args = parser.parse_args()
     columns = args.columns
     sort_by = args.sort_by
@@ -83,6 +88,7 @@ if __name__ == "__main__":
     processes = GetInfo.get_processes_info()
     df = construct_dataframe(processes)
 
+    print_header()
     if n == 0:
         print(df.to_string())
     elif n > 0:
@@ -93,7 +99,7 @@ if __name__ == "__main__":
         processes = GetInfo.get_processes_info()
         df = construct_dataframe(processes)
         os.system("cls") if "nt" in os.name else os.system("clear")
-        print(colored("\n\t\t\t\t\t\t[= RESOURCE MONITOR =]\n", "cyan", attrs=['bold']))
+        print_header()
         if n == 0:
             print(colored(df.to_string(), 'red','on_white'))
         elif n > 0:
