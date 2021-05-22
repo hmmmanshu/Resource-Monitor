@@ -10,6 +10,7 @@ This is a **```Resource Monitor```** TUI app and all the arguments are listed ex
 
 ## **Upcoming Features :**
 - Run live update and kill app together
+- Terminal auto resize
 
 ## Prview
 ![](./src/a.png)
