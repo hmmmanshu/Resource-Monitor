@@ -1,8 +1,8 @@
 import psutil
-import GetInfo
 import pandas as pd
 from datetime import datetime
 from termcolor import colored
+import GetInfo
 import Notify
 import time
 import os
