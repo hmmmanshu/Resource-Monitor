@@ -9,9 +9,9 @@ import os
 
 
 def print_header():
-    print("╔"+"═"*118,end="╗\n║")
-    print(colored("\t\t\t\t\t\t[= RESOURCE MONITOR =]\t\t\t\t\t\t       ", "cyan", attrs=['bold']),end="║\n")
-    print("╚"+"═"*118+"╝")
+    print("╔"+"═"*117,end="╗\n║")
+    print(colored("\t\t\t\t\t\t[= RESOURCE MONITOR =]\t\t\t\t\t\t      ", "cyan", attrs=['bold']),end="║\n")
+    print("╚"+"═"*117+"╝")
 
 def construct_dataframe(processes):
     df = pd.DataFrame(processes)
@@ -47,12 +47,14 @@ def kill_process(df, process, duration):
             proc.kill()
 
 def draw_graph():
+
+    print("\n╔"+"═"*117,end="╗\n║")
     # Print CPU Graph
     cpu_usage = df['cpu_usage'].sum()
     if(cpu_usage>100): cpu_usage=100
     if(cpu_usage<1): cpu_usage=1
-    text = "\nCPU Usage\t"+"█"*int(cpu_usage)
-    print(colored(text, "magenta", attrs=['bold']))
+    text = "CPU Usage\t"+"█"*int(cpu_usage) + int(100-cpu_usage+2)*" "
+    print(colored(text, "magenta", attrs=['bold']),end=" ║\n║")
 
     #Print Memory graph
     RAM = round(psutil.virtual_memory().total / (1024.0 **2))
@@ -61,8 +63,9 @@ def draw_graph():
         else: return float(x[:-2])/1024
     RAM_usage = df['memory_usage'].apply(get_number)
     RAM_usage = (RAM_usage.sum())*100
-    text = "Memory Usage \t"+"█"*int(RAM_usage/ RAM)
-    print(colored(text, "green", attrs=['bold']))
+    text = "Memory Usage \t"+"█"*int(RAM_usage/ RAM) + int(100-int(RAM_usage/ RAM)+2)*" "
+    print(colored(text, "green", attrs=['bold']),end="║\n")
+    print("╚"+"═"*117+"╝")
 
 
 if __name__ == "__main__":
