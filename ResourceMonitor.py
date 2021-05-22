@@ -88,6 +88,16 @@ if __name__ == "__main__":
     kill = args.process_to_close
     duration = int(args.duration)
 
+    # Fix terminal size
+    while(1):
+        height, width = os.popen('stty size', 'r').read().split()
+        if(int(height) < 33 or int(width)<120):
+            print(colored("Terminal size too small. Resize the terminal", 'red', attrs=['bold']))
+        else:
+            break
+        time.sleep(0.5)
+        os.system("cls") if "nt" in os.name else os.system("clear")
+        
     processes = GetInfo.get_processes_info()
     df = construct_dataframe(processes)
 
