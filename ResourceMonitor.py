@@ -9,8 +9,8 @@ import os
 
 
 def print_header():
-    print("╔"+"═"*118+"╗")
-    print(colored("║\t\t\t\t\t\t[= RESOURCE MONITOR =]\t\t\t\t\t\t       ║", "cyan", attrs=['bold']))
+    print("╔"+"═"*118,end="╗\n║")
+    print(colored("\t\t\t\t\t\t[= RESOURCE MONITOR =]\t\t\t\t\t\t       ", "cyan", attrs=['bold']),end="║\n")
     print("╚"+"═"*118+"╝")
 
 def construct_dataframe(processes):
