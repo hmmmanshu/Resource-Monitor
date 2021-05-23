@@ -5,4 +5,7 @@ def Notify(head, body, duration):
         toast = ToastNotifier()
         toast.show_toast(head, body, duration=duration)
     else:
-        pass
+        import notify2
+        notify2.init("Notification")
+        notice = notify2.Notification(head, body)
+        notice.show()
