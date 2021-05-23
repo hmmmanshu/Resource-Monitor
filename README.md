@@ -23,6 +23,7 @@ This is a **```Resource Monitor```** TUI app and all the arguments are listed ex
     - ```pip install pandas```
     - ```pip install win10toast```
     - ```pip install termcolor```
+    - ```pip install notify2```
     - and ```Python3``` obviously
 ### **Usage**
 - Run ```python ResourceMonitor.py -u``` in terminal
