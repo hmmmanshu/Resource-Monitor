@@ -7,6 +7,7 @@ This is a **```Resource Monitor```** TUI app and all the arguments are listed ex
 - Filter the columns to be shown
 - Sort the stats by a column
 - Kill any process instantly or set a timer to terminate
+- Runs on Windows and Linux 
 
 ## **Upcoming Features :**
 - Run live update and kill app together
@@ -25,6 +26,8 @@ This is a **```Resource Monitor```** TUI app and all the arguments are listed ex
     - ```pip install termcolor```
     - ```pip install notify2```
     - and ```Python3``` obviously
+- OR execute [SetupLibraries.py](./SetupLibraries.py)
+
 ### **Usage**
 - Run ```python ResourceMonitor.py -u``` in terminal
 - Optional flags are: 
