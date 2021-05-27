@@ -41,10 +41,6 @@ This is a **```Resource Monitor```** TUI app and all the arguments are listed ex
         **```-u```**| *wether to keep updating the display or not*
         **```--kill process --after time```**| *wether to kill a process after a certain minutes of usage. To kill a process immedietly, skip the 'after' flag*
         ---
-<br>
 
-- So the command would look like
-    - ###  **```python ResourceMonitor.py flag argument```**
-<br>
 
 **NOTE :** Please do not use the live update and the kill function together (This is so because depending upon the sytem specs, psutil takes some time to grab details. So running live update and kill together messes up the overall duration and hence process will be killed not as we want to.)
