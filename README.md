@@ -30,7 +30,8 @@ This is a **```Resource Monitor```** TUI app and all the arguments are listed ex
 - OR execute [SetupLibraries.py](./SetupLibraries.py)
 
 ### **Usage**
-- Run ```python ResourceMonitor.py -u``` in terminal
+- Run ```python ResourceMonitor.py -u```
+- Run ```python Curses_Implementation.py -u``` (Curses)
 - Optional flags are: 
 
     - `Flag` | `Detail`
