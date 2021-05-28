@@ -13,13 +13,14 @@ This is a **```Resource Monitor```** TUI app and all the arguments are listed ex
 - Run live update and kill app together
 - Terminal auto resize
 - [Curses](https://docs.python.org/3/library/curses.html#module-curses) implementation
+    - Current curses implemntation does not do a lot but allows navigation using arrow keys in the terminal
 
 ## Preview
 ![](./src/a.png)
 
 ### **Setup**
-- Download all the files of this repository
-- Install the necessary libraries as:
+- Download all files
+- Install the libraries as :
     - ```pip install psutil```
     - ```pip install pandas```
     - ```pip install win10toast```
